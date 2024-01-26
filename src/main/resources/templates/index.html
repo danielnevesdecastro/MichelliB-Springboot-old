@@ -1,15 +1,24 @@
-<html xmlns:th="http://thymeleaf.org" 
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-	
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
-	
+	<title>Eventos</title>
 </head>
 
 <body>
-		<h3>Olá Mundo com SPRING BOOT</h3>
-</body>	
-	
-	
-	
-	
+	<h1>Lista de Eventos</h1>
+	<h3><a href="/cadastrarEvento">CADASTRAR EVENTO</a></h3>
+
+	<div th:each="evento : ${eventos}">
+		<div class="row">
+			<p><span th:text="${evento.nome}"></span></p>
+			<p><span th:text="${evento.nome}"></span></p>
+			<p><span th:text="${evento.local}"></span></p>
+			<p><span th:text="${evento.horario}"></span></p>
+			</div>
+		</div>
+</body>
+
+
+
+
 </html>
